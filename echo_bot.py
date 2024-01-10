@@ -42,9 +42,9 @@ def generate_response(from_user, text):
     res = []
     res. append(TextMessage(text=f"{from_user}さん"))
     if "あ" in text:
-        res.append((TextMessage(text="Now loading..."))
+        res.append(TextMessage(text="Now loading..."))
     else:
-        res.append((TextMessage(text=f"received message: {text}"))
+        res.append(TextMessage(text=f"received message: {text}"))
     return res
 
 @handler.add(MessageEvent, message=TextMessageContent)
