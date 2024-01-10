@@ -40,11 +40,11 @@ def callback():
     return "OK"
 def generate_response(from_user, text):
     res = []
-    res. append(f"{from_user}さん")
+    res. append(TextMessage(text=f"{from_user}さん"))
     if "あ" in text:
-       res.append("Now loading...")
+       res.append((TextMessage(text="Now loading..."))
     else:
-        res.append(f"received message: {text}")
+        res.append((TextMessage(text=f"received message: {text}"))
     return res
 
 @handler.add(MessageEvent, message=TextMessageContent)
