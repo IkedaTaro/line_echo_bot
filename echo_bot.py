@@ -40,17 +40,16 @@ def callback():
     return "OK"
 
 
-lots = ('大吉', '中吉', '吉', '末吉', '凶')
-import random
-randint = random.randrange(0, len(lots))
-lot = lots[randint]
 
 
-randint = random.randrange(0, len(lots))
 def generate_response(from_user, text):
     res = []
     res. append(TextMessage(text=f"{from_user}さん"))
     if "くじひいて" in text:
+        lots = ('大吉', '中吉', '吉', '末吉', '凶')
+        import random
+        randint = random.randrange(0, len(lots))
+        lot = lots[randint]
         res.append(TextMessage(text=lot))
     else:
         res.append(TextMessage(text=f"received message: {text}"))
