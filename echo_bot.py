@@ -44,7 +44,7 @@ def generate_response(from_user, text):
     if "あ" in text:
        res.append("Now loading...")
     else:
-        res.append(f"'reseived message' {text}")
+        res.append(f"received message: {text}")
     return res
 
 @handler.add(MessageEvent, message=TextMessageContent)
